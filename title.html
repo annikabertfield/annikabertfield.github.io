@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annika Bertfield</title>
     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Jacquarda+Bastarda+9+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Jacquarda+Bastarda+9+Charted&family=Yarndings+12&display=swap');
+
+.yarndings-12-regular {
+  font-family: "Yarndings 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
     body {
          margin: 0;
          padding: 0;
-         font-family: Arial, sans-serif;
+         font-family: 'Jacquarda Bastarda 9', serif;
          background-image: url('assets/cursive1.png');
          background-size: cover;
          background-position: center;
@@ -30,6 +41,7 @@
 }
 
         
+
         nav {
             width: 100%;
            /* background-color: #333; */
@@ -55,7 +67,7 @@
         nav ul li a {
             text-decoration: none;
             color: #000000; 
-            font-size: 18px;
+            font-size: 50px;
         }
 
         nav a:hover {
@@ -68,9 +80,77 @@
             text-align: center;
             margin-top: 100px;
         }
+
+
+        .marquee-container {
+      position: fixed; /* Use fixed positioning to cover the entire viewport */
+      top: 0;
+      left: 10px;
+      width: 20%;
+      height: 100%;
+      z-index: 999; /* Set a high z-index to ensure it appears above other elements */
+      overflow: hidden; /* Hide overflow content */
+      pointer-events: none;
+    }
+
+    .marquee-content {
+      white-space: nowrap; /* Prevent content from wrapping */
+      position: absolute;
+      animation: marquee 100s linear infinite; /* Adjust the animation duration */
+     
+      pointer-events: none;
+    }
+
+    @keyframes marquee {
+      
+      from {
+        transform: translateY(0%) rotate(0deg);
+      }
+
+      to {
+        transform: translateY(1000%) rotate(359deg);
+      }
+    }
+
+    .snowflake {
+    font-family: 'Yarndings 12', serif;
+    font-size: 80px;
+}
     </style>
 </head>
 <body>
+
+    <script>
+        window.onload = function() {
+          var container = document.querySelector('.marquee-container');
+          var windowWidth = window.innerWidth;
+          var randomLeft = Math.floor(Math.random() * (windowWidth - 10)) + 10; // Generate random number between 10 and window width
+      
+          container.style.left = randomLeft + 'px';
+        
+
+        // Second marquee
+        var secondContainer = document.getElementById('second-marquee');
+          var secondRandomLeft = Math.floor(Math.random() * (windowWidth - 10)) + 10;
+          secondContainer.style.left = secondRandomLeft + 'px';
+        };
+
+
+      </script>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <p class="snowflake"> l</p>
+        </div>
+      </div>
+
+      <div class="marquee-container" id="second-marquee">
+        <div class="marquee-content">
+           
+            <p class="snowflake">k</p>
+        </div>
+    </div>  
+
     <nav>
         <ul>
             <li><a href="title.html">Home</a></li>

@@ -4,67 +4,73 @@
 <title>CSS Website Layout</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Jacquarda+Bastarda+9+Charted&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Jacquarda Bastarda 9', serif;
 }
 
 /* Style the header */
 .header {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 
-
 nav {
-            width: 100%;
-           /* background-color: #333; */
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+nav a {
+  text-decoration: none;
+  color: #000000; 
+  font-size: 18px;
+  font-family: 'Jacquarda Bastarda 9', serif;
+}
 
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #000000; 
-            font-size: 18px;
-        }
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
 
-        nav a:hover {
-            
-            color: rgb(0, 213, 255);}
+nav ul li a {
+  text-decoration: none;
+  color: #000000; 
+  font-size: 18px;
+}
 
+nav a:hover {
+  color: rgb(0, 213, 255);
+}
 
-
- .section { background-color: none;
-
-            }
-
-            .one,
-        .three {
-            background-color: none;
-        }
-
+/* Add a parent selector to increase specificity */
+nav.nav-menu a {
+  text-decoration: none;
+  color: #000000; 
+  font-size: 50px;
+  font-family: 'Jacquarda Bastarda 9', serif;
+}
 
 
 .sidenav {
@@ -73,20 +79,21 @@ nav {
   position: fixed;
   padding: 10px ;
   text-align: left;
-        }
+}
 
-.sidenav a{
-
+.sidenav a {
   text-decoration: none;
   color: #000000; 
-  font-size: 18px;
+  font-size: 50px;
+  font-family: 'Jacquarda Bastarda 9 Charted', serif;
 }
 
 .sidenav a:hover { 
-    color: rgb(0, 213, 255);}
+  color: rgb(0, 213, 255);
+  font-family: 'Jacquarda Bastarda 9', serif;
+}
 
-
-    .column {
+.column {
   float: left;
   padding: 10px;
 }
@@ -94,7 +101,6 @@ nav {
 .column.side {
   width: 25%;
 }
-
 
 .column.middle {
   width: 50%;
@@ -121,26 +127,25 @@ nav {
   
 </div>
 
+<!-- Only one sidenav is necessary -->
 <div class="sidenav">
-
     <p> <a href="cave.html">Cave</a></p>
     <p> <a href="drawings.html">Drawing</a></p>
     <p> <a href="seeyouatthetop.html">Fireworks</a></p>
     <p> <a href="light.html">Light</a></p>
+    <p> <a href="cave.html">Cave</a></p>
+    <p> <a href="#">installations</a></p>
 
-</div>
 
-<div class="sidenav">
-
-    <nav>
-        <ul>
-            <li><a href="title.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="works.html">Work</a></li>
-            <li><a href="cv.html">Resume</a></li>
-        </ul>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="title.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="works.html">Work</a></li>
+        <li><a href="cv.html">Resume</a></li>
+      </ul>
     </nav>
-
+    
 </div>
 
 <div class="row">

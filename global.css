@@ -1,12 +1,27 @@
 /* imports Inter, Noto Sans from Google Fonts (code copied from Google Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+HK&family=Noto+Sans+JP&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Jacquarda+Bastarda+9+Charted&display=swap');
 /* define some variables for easy reuse inside the "root" pseudo-selector, this
  * way we can easily change the main colors of the site without having to change
  * them in a bunch of different selectors
  *
  * root doesn't select any actual HTML elements, it's just a holder we can use 
  * for styles */
+
+ .jacquarda-bastarda-9-charted {
+  font-family: "Jacquarda Bastarda 9 Charted", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jacquarda-bastarda-9-regular {
+  font-family: "Jacquarda Bastarda 9", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 :root {
   --bg-color: white;
   --fg-color: black;
