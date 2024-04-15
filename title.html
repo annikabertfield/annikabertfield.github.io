@@ -96,7 +96,7 @@
     .marquee-content {
       white-space: nowrap; /* Prevent content from wrapping */
       position: absolute;
-      animation: marquee 100s linear infinite; /* Adjust the animation duration */
+      animation: marquee 200s linear infinite; /* Adjust the animation duration */
      
       pointer-events: none;
     }
@@ -111,6 +111,39 @@
         transform: translateY(1000%) rotate(359deg);
       }
     }
+
+
+    .marquee2-container {
+      position: fixed; /* Use fixed positioning to cover the entire viewport */
+      top: 0;
+      left: 10px;
+      width: 20%;
+      height: 100%;
+      z-index: 999; /* Set a high z-index to ensure it appears above other elements */
+      overflow: hidden; /* Hide overflow content */
+      pointer-events: none;
+    }
+
+    .marquee2-content {
+      white-space: nowrap; /* Prevent content from wrapping */
+      position: absolute;
+      animation: marquee 300s linear infinite; /* Adjust the animation duration */
+     
+      pointer-events: none;
+    }
+
+    @keyframes marquee2 {
+      
+      from {
+        transform: translateY(0%) rotate(0deg);
+      }
+
+      to {
+        transform: translateY(1000%) rotate(90deg);
+      }
+    }
+
+
 
     .snowflake {
     font-family: 'Yarndings 12', serif;
@@ -144,8 +177,8 @@
         </div>
       </div>
 
-      <div class="marquee-container" id="second-marquee">
-        <div class="marquee-content">
+      <div class="marquee2-container" id="second-marquee">
+        <div class="marquee2-content">
            
             <p class="snowflake">k</p>
         </div>
@@ -154,7 +187,7 @@
     <nav>
         <ul>
             <li><a href="title.html">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="works.html">Work</a></li>
             <li><a href="cv.html">Resume</a></li>
         </ul>
